@@ -20,9 +20,21 @@ Files in this repository are categorized by their prefixes to distinguish betwee
 
 Files prefixed with `00_` are not part of the main sequential workflow. They fall into two categories:
 
-**Standalone Figure Scripts:** These scripts are used to generate two figures for the manuscript and supplementary information (SI) that are adjacent to the main workflows. \* **`00_figure_1_example_experimental_design_comparison.R`**: Generates Figure 1 for the main text. Completely independent of the main workflow. \* **`00_figures_S9_to_S12_sensitivity_plots.R`**: Generates Figures S9 through S12 for the SI. This script needs MBD parameters calculated in the focal driver's script: **`[driver]_2_generating_parameters_for_simulations.R`**.
+**Standalone Figure Scripts:** These scripts are used to generate two figures for the manuscript and supplementary information (SI) that are adjacent to the main workflows.
 
-**Support Files:** These scripts provide essential background functions, setup routines and mathematical stability fixes. They are sourced automatically by the main workflow scripts. \* **`00_support_file_create_directories_and_install_packages.R`**: Ensures all required R packages are installed and builds the necessary output folder structure. \* **`00_support_file_stable_SIG_CPP_function.R` & `00_support_file_stable_utility_function.R`**: Custom C++ and R utility functions to ensure numerical stability during the ACE algorithm's SIG calculations. \* **`00_support_file_ridgeline_plot_function.R`**: A custom plotting function used to visualize the scoring rules. \* **`00_support_file_temperature_prior.R`**: Defines the specific multivariate normal priors needed for the temperature (Norberg) model.
+- **`00_figure_1_example_experimental_design_comparison.R`**: Generates Figure 1 for the main text. Completely independent of the main workflow.
+
+- **`00_figures_S9_to_S12_sensitivity_plots.R`**: Generates Figures S9 through S12 for the SI. This script needs MBD parameters calculated in the focal driver's script: **`[driver]_2_generating_parameters_for_simulations.R`**.
+
+**Support Files:** These scripts provide essential background functions, setup routines and mathematical stability fixes. They are sourced automatically by the main workflow scripts.
+
+- **`00_support_file_create_directories_and_install_packages.R`**: Ensures all required R packages are installed and builds the necessary output folder structure.
+
+- **`00_support_file_stable_SIG_CPP_function.R` & `00_support_file_stable_utility_function.R`**: Custom C++ and R utility functions to ensure numerical stability during the ACE algorithm's SIG calculations.
+
+- **`00_support_file_ridgeline_plot_function.R`**: A custom plotting function used to visualize the scoring rules.
+
+- **`00_support_file_temperature_prior.R`**: Defines the specific multivariate normal priors needed for the temperature (Norberg) model.
 
 ### 2. Main workflow (all drivers)
 
