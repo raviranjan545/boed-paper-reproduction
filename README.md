@@ -49,4 +49,18 @@ For the **nutrients** driver only, we conducted an additional analysis to test t
 
 ## Key Dependencies
 
-This analysis relies heavily on the following R packages: \* `brms` & `rstan` (Bayesian model fitting) \* `acebayes` (Optimal design calculation) \* `Rcpp` (C++ integration for stable utility functions) \* `scoringRules` (Design evaluation) \* `roahd` (Modified Band Depth calculations) \* `ggplot2`, `patchwork`, `ggridges` (Visualization) \* `dplyr`, `tidyr`, `purrr` (Data wrangling)
+This analysis relies heavily on the following R packages:
+
+- `brms` & `rstan` (Bayesian model fitting)
+
+- `acebayes` (Optimal design calculation)
+
+- `Rcpp` (C++ integration for stable utility functions)
+
+- `scoringRules` (Design evaluation)
+
+- `roahd` (Modified Band Depth calculations)
+
+- `ggplot2`, `patchwork`, `ggridges` (Visualization)
+
+- `dplyr`, `tidyr`, `purrr` (Data wrangling)
