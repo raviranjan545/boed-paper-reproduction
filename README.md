@@ -1,6 +1,6 @@
 # BOED Preprint Reproduction: SIG-Optimal vs. Uniform Designs
 
-This repository contains the R scripts necessary to reproduce the analysis presented in our [preprint](https://www.biorxiv.org/content/10.64898/2026.05.28.728579v3.abstract).
+This repository contains the R scripts necessary to reproduce all analyses and figures presented in our [preprint](https://www.biorxiv.org/content/10.64898/2026.05.28.728579v3.abstract).
 
 The project calculates Shannon Information Gain (SIG)-optimal experimental designs with 5, 7, 10, and 15 experimental units and rigorously evaluates them against corresponding uniformly spaced designs. We assess and compare the performance of these designs for both **parameter estimation** and **prediction accuracy** across four different non-linear environmental driver models: \* Light (Eilers-Peeters model) \* Nutrients (Monod model) \* Temperature (Norberg model) \* Toxins (log-logistic model)
 
