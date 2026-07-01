@@ -42,19 +42,19 @@ The core repository is structured around a sequential 7-step workflow applied to
 
 *(Note: In the scripts, `[driver]` corresponds to `light`, `nutrients`, `temperature`, or `toxins`)*
 
-- **`[driver]_1_SIG_optimal_design_calculation.R`** Calculates the SIG-optimal designs 5, 7, 10 and 15 experimental units using the Approximate Coordinate Exchange (ACE) algorithm (via the `acebayes` package) and our custom C++ utility functions.
-- **`[driver]_2_generating_parameters_for_simulations.R`** Draws from prior distributions to generate 1,000 true parameter combinations for the simulation studies and identifies the central curve using Modified Band Depth (MBD).
-- **`[driver]_3_simulation_and_bayesian_fitting.R`** Simulates experimental data for both the optimal and uniform designs based on the true parameters. Fits Bayesian non-linear models to the simulated data using `brms` and Stan.
+- **`[driver]_1_SIG_optimal_design_calculation.R`** Calculates the SIG-optimal designs with 5, 7, 10 and 15 experimental units using the Approximate Coordinate Exchange (ACE) algorithm (via the `acebayes` package) and our custom C++ utility functions.
+- **`[driver]_2_generating_parameters_for_simulations.R`** Draws from prior distributions to generate 1000 true parameter combinations for the simulation studies and identifies the central curve using Modified Band Depth (MBD).
+- **`[driver]_3_simulation_and_bayesian_fitting.R`** Simulates experimental data for both the optimal and uniform designs based on the 1000 true parameter combinations. Fits Bayesian non-linear models to the simulated data using `brms` and Stan.
 - **`[driver]_4_checking_and_saving_posteriors.R`** Checks the Bayesian models for convergence (ensuring R-hat values are \< 1.01) and extracts/saves the posterior draws for downstream analysis.
-- **`[driver]_5_comparing_designs_with_scoring_rules.R`** Evaluates the quality of parameter estimation for both the optimal and uniform designs using strictly proper scoring rules (e.g., CRPS, Energy Score).
+- **`[driver]_5_comparing_designs_with_scoring_rules.R`** Evaluates the quality of parameter estimation for both the optimal and uniform designs using strictly proper scoring rules (CRPS and Energy Score).
 - **`[driver]_6_evaluating_prediction_error.R`** Calculates aggregate and pointwise prediction errors across the environmental gradient.
 - **`[driver]_7_visualising_design_comparison.R`** Generates the final plots and figures comparing the optimal vs. uniform designs (e.g., ridgeline plots, prediction error plots) used in the manuscript.
 
 ## Robustness to Misspecified Priors (Nutrients Only)
 
-For the **nutrients** driver only, we conducted an additional analysis to test the robustness of the SIG-optimal designs. Scripts 8 through 11 evaluate how well the optimal designs perform when the true parameters are drawn from distributions that differ significantly from the priors used to originally generate the designs (i.e., "bad priors").
+For the **nutrients** driver only, we conducted an additional analysis to test the robustness of the SIG-optimal designs. Scripts 8 through 11 evaluate how well the optimal designs perform when the true parameters are drawn from distributions that differ significantly from the priors used to originally generate the designs and in fitting (i.e., "bad priors").
 
-- **`nutrients_8_bad_priors_simulation_and_bayesian_fitting.R`** Simulates experimental data using new true parameter values drawn from the bad priors, and fits the resulting Bayesian models.
+- **`nutrients_8_bad_priors_simulation_and_bayesian_fitting.R`** Simulates experimental data using 1000 true parameter combinations drawn from the new distributions, and fits the resulting Bayesian models.
 - **`nutrients_9_bad_priors_checking_and_saving_posteriors.R`** Checks the bad prior models for convergence and extracts the posterior draws.
 - **`nutrients_10_bad_priors_comparing_designs_with_scoring_rules.R`** Evaluates the parameter estimation quality for the bad prior simulations using proper scoring rules.
 - **`nutrients_11_bad_priors_visualising_design_comparison.R`** Generates plots comparing the robustness of optimal and uniform designs under these bad priors.
