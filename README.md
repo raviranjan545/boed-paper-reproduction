@@ -1,4 +1,4 @@
-# BOED Preprint Reproduction: SIG-Optimal vs. Uniform Designs
+# Bayesian Optimal Experimental Design Preprint Analyses: Comparing SIG-Optimal vs. Uniform Designs
 
 This repository contains the R scripts necessary to reproduce all analyses and figures presented in our preprint:
 
