@@ -2,7 +2,9 @@
 
 This repository contains the R scripts necessary to reproduce all analyses and figures presented in our preprint:
 
-[Ranjan, R., & Thomas, M. K. (2026). Bayesian optimal designs for common single-driver experiments in ecology. *bioRxiv*, 2026-05.](https://www.biorxiv.org/content/10.64898/2026.05.28.728579v3.abstract)
+[Ranjan, R., & Thomas, M. K. (2026). Bayesian optimal designs for common single-driver experiments in ecology. *bioRxiv*, 2026-05.](https://www.biorxiv.org/content/10.64898/2026.05.28.728579.abstract)
+
+If you're not familiar with Github, just click [here]((https://downgit.github.io/#/home?url=https://github.com/raviranjan545/boed-paper-reproduction)) to download the entire repository.
 
 The project calculates Shannon Information Gain (SIG)-optimal experimental designs with 5, 7, 10, and 15 experimental units and rigorously evaluates them against corresponding uniformly spaced designs. We assess and compare the performance of these designs for both **parameter estimation** and **prediction accuracy** across four different non-linear environmental driver models:
 
