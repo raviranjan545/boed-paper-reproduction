@@ -33,7 +33,7 @@ C <- 40
 # If you want to run it on a laptop, we recommend reducing:
 # the number of starting conditions C and 
 # these settings in pacenlm below: N1 = 40, N2 = 200, B = c(40000, 2000)
-# More details about the settings in Section 2, SI
+# More details about the settings in Appendix S3 of the paper
 cores <- detectCores() - 1
 
 ## Set seed for reproducibility.
